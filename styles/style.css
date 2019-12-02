@@ -9,6 +9,7 @@ header{
 }
 
 .top-line{
+    z-index: 100;
     position: fixed;
     display: inline-flex;
     height: 70px;
@@ -32,10 +33,50 @@ li{
 a{
     text-decoration: none;
     color: white;
+    transition: 0.2s;
 }
 
 .search{
 float: right ;
+    background: #171a1c;
+}
+
+.search:active{
+    user-input: active;
+}
+
+i{
+    z-index: 110;
+    position: absolute;
+    background: #171a1c;
+    float: right ;
+    right:27px;
+    /*height: 70px;
+    width: 70px;*/
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+input{
+    z-index: 150;
+    opacity: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 70px;
+    height: 70px;
+    background: #171a1c;
+    border:none;
+    transition: 0.2s;
+}
+.search:hover i{
+    visibility: hidden;
+}
+
+input:focus{
+    opacity: 1;
+    width: 300px;
+    outline: none;
 }
 
 .logo{
@@ -52,11 +93,7 @@ float: right ;
     background: #1a1d20;
 }
 
-i{
-    background: #171a1c;
-    float: right ;
-    padding: 27px;
-}
+
 
 .latest{
     font-family: 'Open Sans', sans-serif;
@@ -93,14 +130,22 @@ button{
     width: 160px;
     height: 55px;
     border-radius: 3px;
+    transition: 0.2s;
 }
 
 .sub{
     background: #89ca62;
 }
+.sub:hover{
+    background: #529249;
+}
 
 .best{
     background: #14b9d5;
+}
+
+.best:hover{
+    background: #1490ad;
 }
 
 .posts{
@@ -308,4 +353,8 @@ footer{
 
 .content>img{
     grid-column-start: 3;
+}
+
+a:hover{
+    transform: scale(1.02);
 }
