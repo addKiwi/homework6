@@ -120,6 +120,7 @@ input:focus{
     bottom: 0;
     width: 100%;
     height: 341%;
+    transition: linear;
 }
 h1{
     font-size: 27px;
@@ -237,6 +238,7 @@ button{
      bottom: -858px;
      width: 100%;
      height: 341%;
+    transition: linear;
  }
 
  .clients>h1{
